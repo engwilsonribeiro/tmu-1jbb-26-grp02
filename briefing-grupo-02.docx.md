@@ -193,6 +193,30 @@ Dependência de conteúdos e informações que ainda precisam ser definidos ou s
 
 Definir pendências de conteúdo, personas e requisitos; organizar responsabilidades do Grupo 2; continuar prototipação no Figma e desenvolvimento das telas
 
+# **10\. Nível de maturidade do projeto — rubrica e linha do tempo**
+
+O percentual representa o marco de maturidade alcançado no projeto. Considerem uma etapa concluída somente quando seus critérios estiverem atendidos e houver evidências registradas. A avaliação abaixo foi feita com base no conteúdo deste briefing; telas ou protótipos não foram considerados sem evidência documentada.
+
+> **ESTÁGIO ATUAL: 20% — Público-alvo e personas (em andamento).**
+>
+> **Último marco concluído: 10%.** O problema e a proposta da Hire Me estão descritos. O público está identificado de forma geral, mas faltam personas e a definição de alguns dados. Há conteúdos já registrados sobre identidade visual, referências e páginas, porém isso não substitui a conclusão dos critérios das etapas anteriores.
+
+| Marco | Etapa | Critério de conclusão | Evidência registrada no briefing | Situação |
+| :---- | :---- | :---- | :---- | :---- |
+| **0%** | Início | Projeto ainda sem problema, público ou proposta definidos. | — | Concluído |
+| **10%** | Briefing e problema | Problema/oportunidade, solução e objetivo estão descritos. | Necessidade de aproximar oportunidades, profissionais e capacitação; solução e objetivo da Hire Me definidos. | **Concluído** |
+| **20%** | Público-alvo e personas | Público, necessidades e pelo menos duas personas coerentes com a proposta estão documentados. | Público e necessidades descritos em linhas gerais; faixa etária a definir; campos das duas personas estão vazios. | **ETAPA ATUAL — em andamento** |
+| **30%** | Referências e identidade visual | Benchmark analisado com fonte/link; cores, tipografia e estilo visual definidos e justificados. | LinkedIn analisado e direção visual descrita; falta registrar o link da referência e completar a validação de contraste/acessibilidade. | Parcial |
+| **40%** | Conteúdo e arquitetura | Páginas, funcionalidades, jornada principal, hierarquia e navegação estão definidos. | Mapa de páginas, funcionalidades, hierarquia e menu registrados; jornada principal ainda está vazia. | Parcial |
+| **50%** | Estrutura no Figma | Estrutura e telas principais organizadas no Figma. | Há um link do Figma, mas o briefing não registra telas ou estrutura concluída. | Pendente de evidência |
+| **60%** | Design das telas | Telas principais aplicam a identidade visual e apresentam conteúdo, hierarquia e CTAs consistentes. | Nenhuma tela finalizada está documentada neste briefing. | Pendente de evidência |
+| **70%** | Protótipo navegável | Fluxos e interações principais podem ser testados no protótipo. | Protótipo navegável não documentado. | Pendente de evidência |
+| **80%** | Implementação | Telas previstas implementadas em HTML, CSS e JavaScript conforme o escopo. | Implementação aparece como etapa planejada; não há entrega registrada. | Pendente |
+| **90%** | Testes e ajustes | Navegação, responsividade, acessibilidade e funcionalidades verificadas e ajustadas. | Critérios de validação estão listados, mas não há resultados de testes registrados. | Pendente |
+| **100%** | Entrega final | Projeto revisado, validado e pronto para apresentação, com entregas finais documentadas. | Entrega final e validação ainda não registradas. | Pendente |
+
+**Para avançar ao marco de 20% concluído:** definir o público com mais precisão, completar as duas personas e revisar essas definições com base nas entrevistas. Em seguida, registrar a fonte da referência visual e preencher a jornada principal do usuário.
+
 # **Checklist de validação**
 
 ☐ O briefing foi conferido com base nas entrevistas.
