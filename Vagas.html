@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me! | Vagas</title>
+    <link rel="stylesheet" href="assets/css/vagas.css">
+    <script src="assets/js/vagas.js" defer></script>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Hire Me!">
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="vagas.html" class="ativo">Vagas</a>
+            <a href="freelancers.html">Freelancers</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="sobre-nós.html">Sobre Nós</a>
+        </nav>
+
+        <div class="acoes-menu">
+            <a href="entrar.html" class="btn-entrar">Entrar</a>
+            <a href="cadastre-se.html" class="btn-cadastrar">Cadastre-se</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- BANNER -->
+        <section class="banner-vagas">
+            <div class="banner-conteudo">
+                <h1>Encontre a oportunidade<br>ideal para você</h1>
+                <p>Milhares de vagas esperando por talentos como o seu.</p>
+            </div>
+        </section>
+
+        <!-- PESQUISA -->
+        <section class="area-busca">
+            <form id="formBusca" class="form-busca">
+
+                <label class="campo campo-palavra">
+                    <span aria-hidden="true">⌕</span>
+                    <input
+                        type="search"
+                        id="palavraChave"
+                        placeholder="Cargo ou palavra-chave"
+                    >
+                </label>
+
+                <label class="campo">
+                    <span aria-hidden="true">♧</span>
+                    <select id="areaAtuacao">
+                        <option value="">Área de atuação</option>
+                        <option value="design">Design</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="alimentos">Alimentos</option>
+                    </select>
+                </label>
+
+                <label class="campo">
+                    <span aria-hidden="true">⌖</span>
+                    <input
+                        type="text"
+                        id="localizacao"
+                        placeholder="Localização"
+                    >
+                </label>
+
+                <button type="submit" class="btn-buscar">Buscar</button>
+            </form>
+        </section>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="conteudo">
+
+            <!-- FILTROS -->
+            <aside class="filtros">
+                <h2>Filtros</h2>
+
+                <fieldset>
+                    <legend>Tipos de trabalho</legend>
+
+                    <label>
+                        <input type="checkbox" name="tipo" value="presencial">
+                        Presencial
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="tipo" value="remoto">
+                        Remoto
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="tipo" value="hibrido">
+                        Híbrido
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nível de experiência</legend>
+
+                    <label>
+                        <input type="checkbox" name="nivel" value="estagio">
+                        Estágio
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="nivel" value="junior">
+                        Júnior
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="nivel" value="pleno">
+                        Pleno
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="nivel" value="senior">
+                        Sênior
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="nivel" value="especialista">
+                        Especialista
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Área de atuação</legend>
+
+                    <select id="filtroArea">
+                        <option value="">Selecionar área</option>
+                        <option value="design">Design</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="alimentos">Alimentos</option>
+                    </select>
+                </fieldset>
+
+                <button type="button" id="limparFiltros" class="limpar">
+                    Limpar filtros
+                </button>
+            </aside>
+
+            <!-- LISTA DE VAGAS -->
+            <section class="lista-vagas">
+                <div class="lista-cabecalho">
+                    <h2>Vagas em destaque</h2>
+
+                    <label class="ordenacao">
+                        Ordenado por:
+                        <select id="ordenacao">
+                            <option value="recentes">Recentes</option>
+                            <option value="antigas">Mais antigas</option>
+                            <option value="titulo">Nome da vaga</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div id="vagasContainer" class="vagas-container">
+
+                    <!-- VAGA 1 -->
+                    <article class="vaga"
+                        data-id="designer-ui-ux"
+                        data-titulo="Designer UI/UX"
+                        data-empresa="Bispo Alimentos"
+                        data-local="José Bonifácio, SP"
+                        data-area="design"
+                        data-tipo="hibrido"
+                        data-nivel="pleno"
+                        data-tempo="3">
+
+                        <div class="logo-empresa">
+                            <img src="assets/images/bispo.jpg" alt="Bispo Alimentos">
+                        </div>
+
+                        <div class="vaga-info">
+                            <h3>Designer UI/UX</h3>
+                            <p class="empresa">Bispo Alimentos</p>
+                            <p class="detalhes">⌖ José Bonifácio, SP &nbsp; ▣ Pleno</p>
+                        </div>
+
+                        <div class="vaga-direita">
+                            <span class="tempo">Publicado há 3 horas</span>
+                            <button class="favorito" type="button"
+                                aria-label="Salvar vaga"
+                                aria-pressed="false">♡</button>
+                        </div>
+                        <a class="vaga-link" href="DetalheVaga.html?vaga=designer-ui-ux"
+                            aria-label="Ver detalhes da vaga Designer UI/UX"></a>
+                    </article>
+
+                    <!-- VAGA 2 -->
+                    <article class="vaga"
+                        data-id="desenvolvedor-full-stack"
+                        data-titulo="Desenvolvedor Full Stack"
+                        data-empresa="Minerva Foods"
+                        data-local="Barretos, SP"
+                        data-area="tecnologia"
+                        data-tipo="hibrido"
+                        data-nivel="senior"
+                        data-tempo="5">
+
+                        <div class="logo-empresa">
+                            <img src="assets/images/minerva foods.jpg" alt="Minerva Foods">
+                        </div>
+
+                        <div class="vaga-info">
+                            <h3>Desenvolvedor Full Stack</h3>
+                            <p class="empresa">Minerva Foods</p>
+                            <p class="detalhes">⌖ Barretos, SP &nbsp; ▣ Sênior</p>
+                        </div>
+
+                        <div class="vaga-direita">
+                            <span class="tempo">Publicado há 5 horas</span>
+                            <button class="favorito" type="button"
+                                aria-label="Salvar vaga"
+                                aria-pressed="false">♡</button>
+                        </div>
+                        <a class="vaga-link" href="DetalheVaga.html?vaga=desenvolvedor-full-stack"
+                            aria-label="Ver detalhes da vaga Desenvolvedor Full Stack"></a>
+                    </article>
+
+                    <!-- VAGA 3 -->
+                    <article class="vaga"
+                        data-id="analista-marketing-digital"
+                        data-titulo="Analista de Marketing Digital"
+                        data-empresa="Nestlé"
+                        data-local="Mirassol, SP"
+                        data-area="marketing"
+                        data-tipo="presencial"
+                        data-nivel="especialista"
+                        data-tempo="0.5">
+
+                        <div class="logo-empresa">
+                            <img src="assets/images/nestle.png" alt="Nestlé">
+                        </div>
+
+                        <div class="vaga-info">
+                            <h3>Analista de Marketing Digital</h3>
+                            <p class="empresa">Nestlé</p>
+                            <p class="detalhes">⌖ Mirassol, SP &nbsp; ▣ Especialista</p>
+                        </div>
+
+                        <div class="vaga-direita">
+                            <span class="tempo">Publicado há menos de 1 hora</span>
+                            <button class="favorito" type="button"
+                                aria-label="Salvar vaga"
+                                aria-pressed="false">♡</button>
+                        </div>
+                        <a class="vaga-link" href="DetalheVaga.html?vaga=analista-marketing-digital"
+                            aria-label="Ver detalhes da vaga Analista de Marketing Digital"></a>
+                    </article>
+
+                    <!-- VAGA 4 -->
+                    <article class="vaga"
+                        data-id="aprendiz-administrativo"
+                        data-titulo="Aprendiz Administrativo"
+                        data-empresa="Petrobras"
+                        data-local="Rio de Janeiro, RJ"
+                        data-area="administrativo"
+                        data-tipo="presencial"
+                        data-nivel="estagio"
+                        data-tempo="2">
+
+                        <div class="logo-empresa">
+                            <img src="assets/images/petrobras.png" alt="Petrobras">
+                        </div>
+
+                        <div class="vaga-info">
+                            <h3>Aprendiz Administrativo</h3>
+                            <p class="empresa">Petrobras</p>
+                            <p class="detalhes">⌖ Rio de Janeiro, RJ &nbsp; ▣ Estágio</p>
+                        </div>
+
+                        <div class="vaga-direita">
+                            <span class="tempo">Publicado há 2 horas</span>
+                            <button class="favorito" type="button"
+                                aria-label="Salvar vaga"
+                                aria-pressed="false">♡</button>
+                        </div>
+                        <a class="vaga-link" href="DetalheVaga.html?vaga=aprendiz-administrativo"
+                            aria-label="Ver detalhes da vaga Aprendiz Administrativo"></a>
+                    </article>
+
+                </div>
+
+                <p id="mensagemVazia" class="mensagem-vazia" hidden>
+                    Nenhuma vaga encontrada. Tente alterar sua pesquisa ou os filtros.
+                </p>
+
+                <button type="button" id="verTodas" class="btn-todas">
+                    Ver todas as vagas
+                </button>
+            </section>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,661 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #092744;
+    --azul-escuro: #001d3a;
+    --cinza-menu: #788b9e;
+    --verde: #00b3a4;
+    --fundo: #f3f6f8;
+    --texto-secundario: #8291a1;
+    --borda: #dce3e9;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--azul);
+    background: var(--fundo);
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    width: 100%;
+    min-height: 68px;
+    padding: 8px 18px;
+    background: #77899b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 105px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: #ffffff;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #e0f5ff;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.acoes-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.btn-entrar,
+.btn-cadastrar {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 7px;
+    color: white;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.btn-entrar {
+    border: 1px solid white;
+}
+
+.btn-cadastrar {
+    background: var(--verde);
+    border: 1px solid var(--verde);
+}
+
+.btn-entrar:hover {
+    background: #60768b;
+}
+
+.btn-cadastrar:hover {
+    background: #008f83;
+}
+
+/* BANNER */
+.banner-vagas {
+    min-height: 136px;
+    padding: 23px 6%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background-color: var(--azul-escuro);
+    background-image: url("imagens/banner-vagas.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-conteudo h1 {
+    color: white;
+    font-size: clamp(24px, 3.6vw, 31px);
+    line-height: 1.12;
+    margin-bottom: 9px;
+}
+
+.banner-conteudo p {
+    color: white;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* BARRA DE BUSCA */
+.area-busca {
+    padding: 7px 11px;
+    background: #fff;
+    border-bottom: 1px solid var(--borda);
+}
+
+.form-busca {
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 1.1fr auto;
+    align-items: center;
+    gap: 35px;
+}
+
+.campo {
+    height: 27px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+
+    border: 1px solid #bac6d1;
+    border-radius: 6px;
+    background: white;
+    color: #7b8793;
+}
+
+.campo span {
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #586675;
+    font-family: inherit;
+    font-size: 10px;
+}
+
+.campo select {
+    cursor: pointer;
+}
+
+.btn-buscar {
+    min-width: 67px;
+    height: 27px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    background: var(--verde);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-buscar:hover {
+    background: #008f83;
+}
+
+/* ÁREA PRINCIPAL */
+.conteudo {
+    display: grid;
+    grid-template-columns: 113px minmax(0, 1fr);
+    gap: 20px;
+    padding: 7px 11px 10px;
+    align-items: start;
+}
+
+/* FILTROS */
+.filtros {
+    padding: 9px 10px;
+    background: #e0e6eb;
+    border-radius: 6px;
+    color: #263a4d;
+}
+
+.filtros h2 {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.filtros fieldset {
+    border: none;
+    margin-bottom: 10px;
+    min-width: 0;
+}
+
+.filtros legend {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.filtros fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: #687581;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.filtros input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+.filtros fieldset select {
+    width: 100%;
+    padding: 5px;
+    font-size: 9px;
+    color: #697784;
+    border: 1px solid #c6d0d8;
+    border-radius: 4px;
+    background: #f5f7f8;
+}
+
+.limpar {
+    width: 100%;
+    margin-top: 7px;
+    padding: 5px 0 0;
+    text-align: left;
+    border: none;
+    background: transparent;
+    color: #6f7b87;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.limpar:hover {
+    color: var(--verde);
+}
+
+/* LISTA DE VAGAS */
+.lista-vagas {
+    min-width: 0;
+}
+
+.lista-cabecalho {
+    min-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.lista-cabecalho h2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ordenacao {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #858d95;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.ordenacao select {
+    max-width: 105px;
+    border: none;
+    background: transparent;
+    color: var(--azul);
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+/* CARTÕES */
+.vagas-container {
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    overflow: hidden;
+    background: #f8fafb;
+}
+
+.vaga {
+    position: relative;
+    min-height: 55px;
+    padding: 7px 9px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #e0e6eb;
+    transition: background 0.2s;
+}
+
+.vaga:last-child {
+    border-bottom: none;
+}
+
+.vaga:hover {
+    background: #edf8f7;
+}
+
+.vaga-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.vaga-link:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: -2px;
+}
+
+.logo-empresa {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 4px;
+}
+
+.logo-empresa img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.vaga-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.vaga-info h3 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #202b36;
+    margin-bottom: 2px;
+}
+
+.empresa {
+    font-size: 9px;
+    color: #727f8a;
+    margin-bottom: 3px;
+}
+
+.detalhes {
+    font-size: 8px;
+    color: #7e8994;
+}
+
+.vaga-direita {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.tempo {
+    color: #818890;
+    font-size: 11px;
+    text-align: right;
+}
+
+.favorito {
+    position: relative;
+    z-index: 2;
+    width: 20px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #59636d;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.favorito:hover,
+.favorito.salvo {
+    color: var(--verde);
+}
+
+.favorito.salvo {
+    font-weight: bold;
+}
+
+.mensagem-vazia {
+    padding: 20px 10px;
+    text-align: center;
+    color: #788694;
+    font-size: 12px;
+}
+
+/* BOTÃO VER TODAS */
+.btn-todas {
+    display: block;
+    margin: 7px auto 0;
+    min-width: 140px;
+    padding: 6px 17px;
+    border: none;
+    border-radius: 6px;
+    background: var(--azul);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-todas:hover {
+    background: #10466f;
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 1100px) {
+    .banner-vagas {
+        min-height: 175px;
+        padding-left: 6%;
+    }
+
+    .conteudo {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 25px;
+        padding: 12px 20px;
+    }
+
+    .filtros {
+        padding: 12px;
+    }
+
+    .filtros h2 {
+        font-size: 14px;
+    }
+
+    .filtros legend {
+        font-size: 12px;
+    }
+
+    .filtros fieldset label {
+        font-size: 12px;
+    }
+
+    .vaga {
+        min-height: 60px;
+        padding: 9px 12px;
+    }
+
+    .logo-empresa {
+        width: 40px;
+        height: 40px;
+    }
+
+    .vaga-info h3 {
+        font-size: 12px;
+    }
+
+    .empresa {
+        font-size: 10px;
+    }
+
+    .detalhes {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    .banner-vagas {
+        min-height: 150px;
+        padding: 22px 6%;
+        background-position: 58% center;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 25px;
+    }
+
+    .banner-conteudo p {
+        max-width: 240px;
+        font-size: 10px;
+    }
+
+    .form-busca {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .campo {
+        min-width: 0;
+    }
+
+    .btn-buscar {
+        width: 100%;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .filtros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 12px;
+    }
+
+    .filtros h2 {
+        grid-column: 1 / -1;
+    }
+
+    .filtros fieldset {
+        margin-bottom: 4px;
+    }
+
+    .limpar {
+        align-self: end;
+    }
+
+    .lista-cabecalho h2 {
+        font-size: 12px;
+    }
+
+    .vaga {
+        padding: 8px 5px;
+        gap: 6px;
+    }
+
+    .logo-empresa {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vaga-info h3 {
+        font-size: 10px;
+    }
+
+    .tempo {
+        font-size: 9px;
+        max-width: 85px;
+    }
+
+    .favorito {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 12px;
+        gap: 14px;
+    }
+
+    .logo img {
+        width: 95px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .acoes-menu {
+        gap: 6px;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 380px) {
+    .vaga-direita {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .tempo {
+        max-width: 75px;
+        font-size: 8px;
+    }
+
+    .lista-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 7px;
+    }
+}
